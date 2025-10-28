@@ -16,6 +16,21 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
+let numberOfCumLaude = 0;
+
+function cumLaude(listOfResults) {
+    for (let i = 0; i < listOfResults.length; i++) {
+        if (listOfResults[i] >= 8) {
+            numberOfCumLaude = numberOfCumLaude + 1;
+        }
+    }
+    return numberOfCumLaude
+}
+
+console.log(cumLaude(grades))
+
+
+
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
@@ -27,7 +42,7 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
-
+/*Zie 1a*/
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -41,6 +56,20 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
+
+/*Tel alle cijfers bij elkaar op*/
+/*Deel pointsTotal door het aantal entries*/
+
+let pointsTotal = 0
+
+function gradeAverage(listOfResults) {
+    for (let i = 0; i < listOfResults.length; i++) {
+        pointsTotal = pointsTotal + listOfResults[i];
+    }
+    return pointsTotal / listOfResults.length;
+}
+
+console.log(gradeAverage(grades));
 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
@@ -57,8 +86,6 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
-
-
 
 
 /* Bonusopdracht: hoogste cijfer */
