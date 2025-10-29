@@ -14,6 +14,7 @@ function getEmailDomain(emailAdress) {
     return emailAdress.substring(atIndex + 1);
 }
 
+console.log('opdracht 1')
 console.log(getEmailDomain('n.eeken@novi-education.nl'));
 console.log(getEmailDomain('t.mellink@novi.nl'));
 console.log(getEmailDomain('a.wiersma@outlook.com'));
@@ -39,6 +40,7 @@ function typeOfEmail(emailAdress) {
     }
 }
 
+console.log('opdracht 2')
 console.log(typeOfEmail('n.eeken@novi-education.nl'))
 console.log(typeOfEmail('t.mellink@novi.nl'))
 console.log(typeOfEmail('a.wiersma@outlook.com'))
@@ -60,6 +62,7 @@ function checkEmailValidity(emailAdress) {
     return emailAdress.includes('@') === true && emailAdress.includes(',') === false && emailAdress.lastIndexOf('.') !== emailAdress.length - 1;
 }
 
+console.log('opdracht 3')
 console.log(checkEmailValidity("n.eeken@novi.nl"));
 console.log(checkEmailValidity("tessmellink@novi.nl"));
 console.log(checkEmailValidity("n.eekenanovi.nl"));
