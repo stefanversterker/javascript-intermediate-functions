@@ -107,7 +107,7 @@ console.log(pointsTotal / grades.length);
 function averageGrade(listOfResults) {
     let pointsTotal = 0;
     for (let i = 0; i < listOfResults.length; i++) {
-        pointsTotal = pointsTotal + listOfResults[i];
+        pointsTotal += listOfResults[i];
     }
     return pointsTotal / listOfResults.length;
 }

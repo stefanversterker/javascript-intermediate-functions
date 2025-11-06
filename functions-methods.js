@@ -31,11 +31,11 @@ console.log(getEmailDomain('a.wiersma@outlook.com'));
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
 function typeOfEmail(emailAdress) {
-    if (emailAdress.includes('novi') === true && emailAdress.includes('-education') === false) {
+    if (getEmailDomain(emailAdress).includes('novi') && !getEmailDomain(emailAdress).includes('-education')) {
         return 'Medewerker';
-    } else if (emailAdress.includes('novi-education') === true) {
+    } else if (getEmailDomain(emailAdress).includes('novi-education') === true) {
         return 'Student';
-    } else if (emailAdress.includes('novi') === false) {
+    } else {
         return 'Extern';
     }
 }
@@ -44,6 +44,7 @@ console.log('opdracht 2')
 console.log(typeOfEmail('n.eeken@novi-education.nl'))
 console.log(typeOfEmail('t.mellink@novi.nl'))
 console.log(typeOfEmail('a.wiersma@outlook.com'))
+console.log(typeOfEmail('novi@gmail.com'))
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -59,7 +60,7 @@ console.log(typeOfEmail('a.wiersma@outlook.com'))
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
 function checkEmailValidity(emailAdress) {
-    return emailAdress.includes('@') === true && emailAdress.includes(',') === false && emailAdress.lastIndexOf('.') !== emailAdress.length - 1;
+    return emailAdress.includes('@') && !emailAdress.includes(',') && emailAdress.lastIndexOf('.') !== emailAdress.length - 1;
 }
 
 console.log('opdracht 3')
